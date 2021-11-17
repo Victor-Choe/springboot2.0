@@ -1,18 +1,24 @@
 package com.victor.web.controller.customer;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/customer/notice/")
 public class NoticeController {
 
-	@RequestMapping("/customer/notice/list")
-	public String list()//list,detail,edit,reg
-	{return "";}
+	@RequestMapping("list")
+	public String list(Model model)
+	{
+		model.addAttribute("test","hello12312");
+		return "customer.notice.list";
+		//return "customer/notice/list";
+	}
 	
-	@RequestMapping("/customer/notice/detail")
+	@RequestMapping("detail")
 	public String detail()//list,detail,edit,reg
-	{return "";}
+	{return "customer/notice/detail";}
 	
 	
 }
