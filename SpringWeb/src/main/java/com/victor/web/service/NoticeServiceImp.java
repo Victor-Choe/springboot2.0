@@ -1,10 +1,13 @@
 package com.victor.web.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.victor.web.dao.NoticeDao;
 import com.victor.web.entity.Notice;
+import com.victor.web.entity.NoticeView;
 
 @Service
 public class NoticeServiceImp implements NoticeService{
@@ -12,9 +15,9 @@ public class NoticeServiceImp implements NoticeService{
 	private NoticeDao noticeDao;
 	
 	@Override
-	public List<Notice> getList() {
+	public List<NoticeView> getList() {
 		
-		List<Notice> list =noticeDao.getList();
+		List<NoticeView> list =noticeDao.getList();
 		
 		return list;
 	}

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.victor.web.entity.Notice;
+import com.victor.web.entity.NoticeView;
 import com.victor.web.service.NoticeService;
 
 @Controller
@@ -20,7 +20,7 @@ public class NoticeController {
 	@RequestMapping("list")
 	public String list(Model model)
 	{
-		List<Notice> list = service.getList();
+		List<NoticeView> list = service.getList();
 		 
 		model.addAttribute("list",list);
 		return "customer.notice.list"; //TilesViewResolver
