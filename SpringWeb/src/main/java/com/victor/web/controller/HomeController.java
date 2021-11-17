@@ -1,19 +1,18 @@
 package com.victor.web.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.annotation.RequestScope;
 
-@RestController
+@Controller
 public class HomeController {
 	
 
 	@RequestMapping("/index")
 	public String adsdf() {
-		return "hello";
+		return "home.index";
 	}
-	@RequestMapping("/index1")
+	@RequestMapping("/help")
 	public String adsdf1() {
-		return "hello12312";
+		return "home.help";
 	}
 }
