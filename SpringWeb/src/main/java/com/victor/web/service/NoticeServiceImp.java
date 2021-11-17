@@ -2,9 +2,11 @@ package com.victor.web.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.victor.web.dao.NoticeDao;
 import com.victor.web.entity.Notice;
 
+@Service
 public class NoticeServiceImp implements NoticeService{
 	@Autowired
 	private NoticeDao noticeDao;
